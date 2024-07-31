@@ -7,4 +7,19 @@ const generatePasswordResetEmail = (host, token) => {
         If you did not request this, please ignore this email and your password will remain unchanged.\n`
     };
 };
-export default generatePasswordResetEmail;
+
+const generateShipmentShippedEmail = (trackingNumber) => {
+    return {
+        subject: 'Shipment Shipped',
+        message: `Your shipment with tracking number ${trackingNumber} has been shipped. You can track your shipment using this tracking number.\n\n`
+    };
+};
+
+const generateShipmentDeliveredEmail = (trackingNumber) => {
+    return {
+        subject: 'Shipment Delivered',
+        message: `Your shipment with tracking number ${trackingNumber} has been delivered. Thank you for shopping with us!\n\n`
+    };
+};
+
+export { generatePasswordResetEmail, generateShipmentShippedEmail, generateShipmentDeliveredEmail };
