@@ -1,5 +1,5 @@
 import Queue from 'bull';
-import { emailProcessor } from './index.js';
+import _emailProcessor from './_emailProcessor.js';
 
 const emailQueue = new Queue('emailQueue', {
   redis: {
@@ -7,6 +7,6 @@ const emailQueue = new Queue('emailQueue', {
   },
 });
 
-emailQueue.process(emailProcessor);
+emailQueue.process(_emailProcessor);
 
 export default emailQueue;

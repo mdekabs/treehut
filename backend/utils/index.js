@@ -1,11 +1,14 @@
 import responseHandler from "./_responseHandler.js";
-import { emailQueue } from "./_queue.js";
-import generatePasswordResetEmail from "./_emailMessage.js";
-import _emailProcessor from "./_emailProcessor.js";
+import emailQueue from "./_queue.js";
+import { generatePasswordResetEmail, generateShipmentShippedEmail, generateShipmentDeliveredEmail } from "./_emailMessage.js";
+
+
+
 
 export {
   responseHandler,
   emailQueue,
   generatePasswordResetEmail,
-  _emailProcessor,
+  generateShipmentShippedEmail,
+  generateShipmentDeliveredEmail,
 };
